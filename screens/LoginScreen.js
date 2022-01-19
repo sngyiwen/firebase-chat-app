@@ -53,10 +53,9 @@ const LoginScreen = ({ navigation }) => {
         // }}
         onPress={login}
       >
-        <View>
           <Text style={styles.buttonText}>Login</Text>
-        </View>
       </TouchableOpacity>
+      <Text style={styles.errorText}>{errorText}</Text>
     </View>
   );
 };
@@ -108,6 +107,13 @@ const styles = StyleSheet.create({
   cancelButton: {
     backgroundColor: "red",
   },
+  errorText: {
+    color: 'red',
+    marginTop: 20,
+    marginLeft: 20,
+    marginRight: 20,
+    height: 40,
+  }
 });
 
 export default LoginScreen;
